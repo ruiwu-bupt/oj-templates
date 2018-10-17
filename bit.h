@@ -1,5 +1,8 @@
-// pos represents position in nums parameter, not in bit array
+#ifndef __BIT_H
+#define __BIT_H
+
 #include <vector>
+
 template<typename T>
 class BIT{
 private:
@@ -9,6 +12,7 @@ private:
 	}
 public:
 	BIT(std::vector<T> nums);
+    // pos represents position in nums parameter, not in bit array
 	void add(int pos, T value);
 	T prefix(int pos);
 	T range_sum(int pos1, int pos2);
@@ -45,3 +49,5 @@ template<typename T>
 T BIT<T>::range_sum(int pos1, int pos2) {
 	return prefix(pos2) - prefix(pos1-1);
 }
+
+#endif
