@@ -1,0 +1,6 @@
+- bit.h   
+    - a simple binary indexed tree template
+    - change N and vector template parameter in main for other tests
+    - construct time complexity O(nlogn)
+    - add value at certern position: O(logn)
+    - query range sum: O(logn)
